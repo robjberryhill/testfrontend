@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'testfrontend';
-  staticPath: string = 'http://localhost:3001';
+  /*staticPath: string = 'http://localhost:3001';*/
+  staticPath: string = 'ec2-18-223-162-216.us-east-2.compute.amazonaws.com:3001';
 }
