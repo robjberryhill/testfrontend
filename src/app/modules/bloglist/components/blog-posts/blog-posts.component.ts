@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BlogPost } from '../../model/blog-post';
+import { BlogPost } from '../../../../shared/model/blog-post';
 
 @Component({
   selector: 'app-blog-posts',
