@@ -8,13 +8,15 @@ import { BlogPost } from '../../model/blog-post';
   styleUrls: ['./blog-posts.component.css']
 })
 export class BlogPostsComponent implements OnInit {
+  staticPath: string = 'http://localhost:3001/blogList';
+
   blogPosts: BlogPost[];
   @Input() path: string;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get<BlogPost[]>(this.path).subscribe(posts => {
+    this.http.get<BlogPost[]>(this.staticPath).subscribe(posts => {
       this.blogPosts = posts;
     });
   }
