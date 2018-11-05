@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { BlogPost } from '../../../../shared/model/blog-post';
+import { BlogService } from '../../services/blog.service';
 
 @Component({
   selector: 'app-blog-posts',
@@ -8,17 +8,21 @@ import { BlogPost } from '../../../../shared/model/blog-post';
   styleUrls: ['./blog-posts.component.css']
 })
 export class BlogPostsComponent implements OnInit {
-  staticPath: string = 'http://localhost:3001/blogList';
+  /*staticPath: string = 'http://localhost:3001/blogList';*/
 
   blogPosts: BlogPost[];
-  @Input() path: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private blogService: BlogService) { }
 
   ngOnInit() {
-    this.http.get<BlogPost[]>(this.staticPath).subscribe(posts => {
+    /*this.http.get<BlogPost[]>(this.staticPath).subscribe(posts => {
       this.blogPosts = posts;
-    });
+    });*/
+    this.getBlogs();
+  }
+
+  getBlogs(): void {
+    this.blogService.getBlogPosts().subscribe(blogs => this.blogPosts = blogs);
   }
 
 }

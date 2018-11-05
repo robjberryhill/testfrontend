@@ -4,11 +4,16 @@
     Welcome to {{ title }}!
   </h1>
 </div>
+<div>
+  <nav>
+    <a routerLink="home">Home</a>
+    <a routerLink="blogs">Blog</a>
+    <a routerLink="blogCreate">Create Blog</a>
+  </nav>
+</div>
 <hr/>
-<div style="text-align:center">
+<div>
   <div>
-      <h2>Blog Data</h2>
-      <h3>{{staticPath}}</h3>
       <!--<app-blog-posts
         [path]="staticPath">
       </app-blog-posts>-->

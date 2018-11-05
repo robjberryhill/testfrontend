@@ -1,0 +1,18 @@
+<div>
+  <h3>Create A Blog</h3>
+</div>
+<div>
+  <form #blogData="ngForm" (ngSubmit)="addBlog(blogData.value)">
+    <div>
+      <label for="blogTitle">Title:</label>
+      <input type="text" placeholder="Blog Title" name="blogTitle" required ngModel>
+    </div>
+    <div>
+      <label for="blogMessage">Message: </label>
+      <textarea type="text" placeholder="Blog Message" name="blogMessage" required ngModel></textarea>
+    </div>
+    <div>
+      <button type="submit">Create Blog</button>
+    </div>
+  </form>
+</div>

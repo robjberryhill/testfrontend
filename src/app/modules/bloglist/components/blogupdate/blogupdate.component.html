@@ -1,0 +1,21 @@
+<h1>Update Your Blog</h1>
+
+<div *ngIf="blog">
+  <h3>Titled: {{blog.blogTitle}}</h3>
+  <p>Message: {{blog.blogMessage}}</p>
+</div>
+<div>
+  <div>
+    <label>
+      <input placeholder="Title" [(ngModel)]="blog.blogTitle">
+    </label> 
+  </div>
+  <div>
+      <label>
+          <textarea placeholder="message" [(ngModel)]="blog.blogMessage"></textarea>
+      </label>
+  </div>
+  <div>
+    <button (click)="updateBlog()">Update Blog</button>
+  </div>
+</div>
