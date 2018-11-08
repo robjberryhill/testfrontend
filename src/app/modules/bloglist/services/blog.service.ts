@@ -23,7 +23,7 @@ export class BlogService {
   }
 
   addBlogPost(blogPost: BlogPost): Observable<BlogPost> {
-    return this.http.post<BlogPost>(this.blogPath, JSON.stringify(blogPost), httpOptions);
+    return this.http.post<BlogPost>(this.blogPath, blogPost, httpOptions);
   }
 
   updateBlogPost(blogPost: BlogPost): Observable<any> {
