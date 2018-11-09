@@ -31,5 +31,10 @@ export class BlogService {
     return this.http.put(url, blogPost, httpOptions);
   }
 
+  deleteBlogPost(id: number): Observable<any> {
+    const url = `${this.blogPath}/${id}/delete`;
+    return this.http.delete(url);
+  }
+
   constructor(private http: HttpClient) { }
 }

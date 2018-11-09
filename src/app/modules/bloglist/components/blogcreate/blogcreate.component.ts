@@ -28,7 +28,7 @@ export class BlogcreateComponent implements OnInit {
   addBlog(data): void {
     this.blogService.addBlogPost(data as BlogPost)
     .subscribe(blog => {this.blogPosts.push(blog)});
-    console.log(data)
+    window.location.href = '/blogs';
   }
 
 }

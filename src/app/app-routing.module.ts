@@ -5,6 +5,7 @@ import { BlogPostsComponent } from './modules/bloglist/components/blog-posts/blo
 import { BlogdetailsComponent } from './modules/bloglist/components/blogdetails/blogdetails.component';
 import { BlogupdateComponent } from './modules/bloglist/components/blogupdate/blogupdate.component';
 import { BlogcreateComponent } from './modules/bloglist/components/blogcreate/blogcreate.component';
+import { UserlistComponent } from './modules/users/components/userlist/userlist.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'blogList/:id',
     component: BlogdetailsComponent
+  },
+  {
+    path: 'users',
+    component: UserlistComponent
   },
   {
     path: '',

@@ -30,4 +30,10 @@ export class BlogdetailsComponent implements OnInit {
     .subscribe(blog => this.blog = blog);
   }
 
+  deleteBlog(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.blogService.deleteBlogPost(id).subscribe();
+    window.location.href = '/blogs';
+  }
+
 }
