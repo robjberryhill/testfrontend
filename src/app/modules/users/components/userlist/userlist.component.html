@@ -2,7 +2,7 @@
 
 <div *ngFor="let user of users">
   <p>
-    Photo: {{user.userPhoto}} Name: {{user.firstName}} {{user.lastName}} 
+    Photo: {{user.userPhoto}} Name: <a routerLink="/profile/{{user.userId}}">{{user.firstName}} {{user.lastName}}</a> 
     Birthday: {{user.birthDay}} Email: {{user.userEmail}} Phone: {{user.phoneNumer}}
   </p>
 </div>

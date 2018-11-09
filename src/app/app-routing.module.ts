@@ -6,6 +6,7 @@ import { BlogdetailsComponent } from './modules/bloglist/components/blogdetails/
 import { BlogupdateComponent } from './modules/bloglist/components/blogupdate/blogupdate.component';
 import { BlogcreateComponent } from './modules/bloglist/components/blogcreate/blogcreate.component';
 import { UserlistComponent } from './modules/users/components/userlist/userlist.component';
+import { UserprofileComponent } from './modules/users/components/userprofile/userprofile.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'users',
     component: UserlistComponent
+  },
+  {
+    path: 'profile/:id',
+    component: UserprofileComponent
   },
   {
     path: '',

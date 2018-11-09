@@ -11,11 +11,17 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class UsersService {
-  private userPath = 'http://localhost:3001/users/admin';
+  private usersPath = 'http://localhost:3001/users/admin';
+  private userPath = 'http://localhost:3001/users/profile';
 
   getAllUsers(): Observable<Users[]> {
-    return this.http.get<Users[]> (this.userPath)
-  };
+    return this.http.get<Users[]> (this.usersPath);
+  }
+
+  getUserId(id: number): Observable<Users> {
+    const url = `${this.userPath}/${id}`;
+    return this.http.get<Users>(url);
+  }
 
   constructor(private http: HttpClient) { }
 }

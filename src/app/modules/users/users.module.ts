@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserlistComponent } from './components/userlist/userlist.component';
+import { UserprofileComponent } from './components/userprofile/userprofile.component';
 
 @NgModule({
   imports: [
@@ -11,6 +12,6 @@ import { UserlistComponent } from './components/userlist/userlist.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [UserlistComponent]
+  declarations: [UserlistComponent, UserprofileComponent]
 })
 export class UsersModule { }
