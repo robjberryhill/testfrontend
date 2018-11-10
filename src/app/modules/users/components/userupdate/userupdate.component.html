@@ -1,0 +1,45 @@
+<h1>Update Your Profile</h1>
+
+<div *ngIf="user">
+  <h3> {{user.firstName}}  {{user.lastName}} </h3>
+  <p>{{user.userPhoto}}</p>
+  <p>Birthday: {{user.birthDay}}
+    <br/>Email: {{user.userEmail}}
+    <br/>Phone: {{user.phoneNumer}}
+  </p>
+</div>
+<div>
+  <div>
+    <label>
+      <input type="text" placeholder="First Name" [(ngModel)]="user.firstName">
+    </label> 
+  </div>
+  <div>
+    <label>
+        <input type="text" placeholder="Last Name" [(ngModel)]="user.lastName">
+    </label> 
+  </div>
+  <div>
+      <label>
+        <input type="text" placeholder="Photo Path" [(ngModel)]="user.userPhoto">
+      </label> 
+  </div>
+  <div>
+      <label>
+        <input type="date" placeholder="Birthday" [(ngModel)]="user.birthDay">
+      </label> 
+  </div>
+  <div>
+      <label>
+        <input type="email" placeholder="Email" [(ngModel)]="user.userEmail">
+      </label> 
+  </div>
+  <div>
+      <label>
+        <input type="number" placeholder="Phone Number" [(ngModel)]="user.phoneNumer">
+      </label> 
+  </div>  
+  <div>
+    <button (click)="updateUser()">Update Blog</button>
+  </div>
+</div>

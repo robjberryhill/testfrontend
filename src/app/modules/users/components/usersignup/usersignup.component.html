@@ -1,3 +1,42 @@
-<p>
-  usersignup works!
-</p>
+<div>
+  <h3>Sign Up</h3>
+</div>
+<div>
+  <form #userData="ngForm" (ngSubmit)="addUser(userData.value)">
+    <div>
+      <label for="firstName">First Name:</label>
+      <input type="text" placeholder="First Name" name="firstName" required ngModel>
+    </div>
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input type="text" placeholder="Last Name" name="lastName" required ngModel>
+    </div>
+    <div>
+      <label for="userPhoto">Photo:</label>
+      <input type="text" placeholder="Photo Path" name="userPhoto" required ngModel>
+    </div>
+    <div>
+      <label for="birthDay">Birthday:</label>
+      <input type="date" placeholder="Birthday" name="birthDay" required ngModel>
+    </div>
+    <div>
+      <label for="userEmail">Email:</label>
+      <input type="email" placeholder="Email" name="userEmail" required ngModel>
+    </div>
+    <div>
+      <label for="phoneNumer">Phone:</label>
+      <input type="number" placeholder="Phone Number" name="phoneNumer" required ngModel>
+    </div>
+    <div>
+      <label for="userName">Username:</label>
+      <input type="text" placeholder="Username" name="userName" required ngModel>
+    </div>
+    <div>
+      <label for="passWord">Password:</label>
+      <input type="text" placeholder="Password" name="passWord" required ngModel>
+    </div>
+    <div>
+      <button type="submit">Create User</button>
+    </div>
+  </form>
+</div>

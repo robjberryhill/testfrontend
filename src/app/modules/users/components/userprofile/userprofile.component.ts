@@ -24,4 +24,10 @@ export class UserprofileComponent implements OnInit {
     .subscribe(user => this.user = user);
   }
 
+  deleteUser(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.usersService.deleteUserEntry(id).subscribe();
+    window.location.href = '/users';
+  }
+
 }

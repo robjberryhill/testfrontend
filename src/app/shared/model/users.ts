@@ -9,4 +9,6 @@ export class Users {
     userCreatedDate: string;
     userAdmin: string;
     deleted: string;
+    userName: string;
+    passWord: string;
 }
