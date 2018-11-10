@@ -4,6 +4,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserlistComponent } from './components/userlist/userlist.component';
 import { UserprofileComponent } from './components/userprofile/userprofile.component';
+import { UsersignupComponent } from './components/usersignup/usersignup.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,6 @@ import { UserprofileComponent } from './components/userprofile/userprofile.compo
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [UserlistComponent, UserprofileComponent]
+  declarations: [UserlistComponent, UserprofileComponent, UsersignupComponent]
 })
 export class UsersModule { }

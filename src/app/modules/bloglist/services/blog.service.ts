@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BlogPost } from '../../../shared/model/blog-post';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../../../environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -11,7 +12,10 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class BlogService {
-  private blogPath = 'http://localhost:3001/blogList';
+  private beUrl = environment.backendUrl;
+  /*private blogPath = 'http://localhost:3001/blogList';*/
+  private blogPath = this.beUrl + '/blogList';
+
 
   getBlogPosts(): Observable<BlogPost[]> {
     return this.http.get<BlogPost[]> (this.blogPath)
