@@ -12,7 +12,7 @@ import { BlogcreateComponent } from './components/blogcreate/blogcreate.componen
     CommonModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule    
+    ReactiveFormsModule
   ],
   declarations: [
     BlogPostsComponent,
