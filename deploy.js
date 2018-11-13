@@ -22,8 +22,8 @@ function installPM2() {
 // transfers local project to the remote server
 function transferProjectToRemote(failed, successful) {
   return ssh.putDirectory(
-    '../backendblogapp',
-    '/home/ubuntu/backendblogapp',
+    '../testfrontend',
+    '/home/ubuntu/testfrontend',
     {
       recursive: true,
       concurrency: 1,
@@ -49,7 +49,7 @@ function transferProjectToRemote(failed, successful) {
 // creates a temporary folder on the remote server
 function createRemoteTempFolder() {
   return ssh.execCommand(
-    'rm -rf backendblogapp-temp && mkdir backendblogapp-temp', {
+    'rm -rf testfrontend-temp && mkdir testfrontend-temp', {
       cwd: '/home/ubuntu'
   });
 }
@@ -65,7 +65,7 @@ function stopRemoteServices() {
 // updates the project source on the server
 function updateRemoteApp() {
   return ssh.execCommand(
-    'cp -r backendblogapp-temp/* backendblogapp/ && rm -rf backendblogapp-temp', {
+    'cp -r testfrontend-temp/* testfrontend/ && rm -rf testfrontend-temp', {
       cwd: '/home/ubuntu'
   });
 }
@@ -73,7 +73,7 @@ function updateRemoteApp() {
 // restart mongodb and node services on the remote server
 function restartRemoteServices() {
   return ssh.execCommand(
-    'cd backendblogapp && sudo service mongod start && pm2 start app.js', {
+    'cd testfrontend && sudo service mongod start && pm2 start app.js', {
       cwd: '/home/ubuntu'
   });
 }
@@ -85,7 +85,7 @@ function sshConnect() {
   ssh
     .connect({
       // TODO: ADD YOUR IP ADDRESS BELOW (e.g. '12.34.5.67')
-      host: '13.59.209.83',
+      host: '3.16.37.2',
       username: 'ubuntu',
       privateKey: 'ba-key.pem'
     })
@@ -95,7 +95,7 @@ function sshConnect() {
       return installPM2();
     })
     .then(function() {
-      console.log('Creating `backendblogapp-temp` folder.');
+      console.log('Creating `testfrontend-temp` folder.');
       return createRemoteTempFolder();
     })
     .then(function(result) {

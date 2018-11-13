@@ -6,6 +6,7 @@
 /out-tsc
 
 # dependencies
+*.pem
 /node_modules
 
 # IDEs and editors
