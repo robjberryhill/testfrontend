@@ -21,10 +21,6 @@ export class BlogupdateComponent implements OnInit {
   constructor(private blogService: BlogService, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
-    /*const id = +this.route.snapshot.paramMap.get('id')
-    this.http.get<BlogPost>(this.staticPath + id).subscribe(blog => {
-      this.blog = blog;
-    });*/
     this.getUpdateId();
   }
 
