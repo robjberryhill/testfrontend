@@ -1,0 +1,14 @@
+<div>
+  <h3>Create A Comment</h3>
+</div>
+<div>
+  <form #comData="ngForm" (ngSubmit)="addCom(comData.value)">
+    <div>
+      <label for="comMessage">Message: </label>
+      <textarea type="text" placeholder="Comment Message" name="comMessage" required ngModel></textarea>
+    </div>
+    <div>
+      <button type="submit">Create Comment</button>
+    </div>
+  </form>
+</div>

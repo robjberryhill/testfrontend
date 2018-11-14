@@ -1,0 +1,9 @@
+<h1>Comment Details</h1>
+
+<div *ngIf="comment">
+  <h3>Blog: {{comment.blogPost.blogTitle}}</h3>
+  <h5>By User: {{comment.user.userName}}</h5>
+  <a routerLink="/comUpdate/{{comment.comId}}">Update</a>
+  <p>Comment Message: {{comment.comMessage}}<small> Likes:</small> {{comment.comLikes}} Date: {{comment.comCreatedDate}}</p>
+  <button (click)="deleteCom()">Delete Comment</button>
+</div>

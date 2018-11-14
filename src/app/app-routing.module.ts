@@ -9,6 +9,10 @@ import { UserlistComponent } from './modules/users/components/userlist/userlist.
 import { UserprofileComponent } from './modules/users/components/userprofile/userprofile.component';
 import { UsersignupComponent } from './modules/users/components/usersignup/usersignup.component';
 import { UserupdateComponent } from './modules/users/components/userupdate/userupdate.component';
+import { ComlistComponent } from './modules/comments/components/comlist/comlist.component';
+import { ComdetailsComponent } from './modules/comments/components/comdetails/comdetails.component';
+import { ComupdateComponent } from './modules/comments/components/comupdate/comupdate.component';
+import { ComcreateComponent } from './modules/comments/components/comcreate/comcreate.component';
 
 const routes: Routes = [
   {
@@ -46,6 +50,22 @@ const routes: Routes = [
   {
     path: 'userUpdate/:id',
     component: UserupdateComponent
+  },
+  {
+    path: 'comments',
+    component: ComlistComponent
+  },
+  {
+    path: 'comments/:id',
+    component: ComdetailsComponent
+  },
+  {
+    path: 'comUpdate/:id',
+    component: ComupdateComponent
+  },
+  {
+    path: 'comCreate',
+    component: ComcreateComponent
   },
   {
     path: '',
