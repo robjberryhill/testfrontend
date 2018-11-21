@@ -1,5 +1,69 @@
-<h3>This is Home Page!</h3>
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <title>Testfrontend</title>
+  <base href="/">
 
-<div>
-  <p>Welcome to your home page.</p>
-</div>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+<body>
+    <div class="header">
+        <h2>Blog Name</h2>
+      </div>
+
+      <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <div class="dropdown">
+          <button class="dropbtn">Profile
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="signin">Sign In</a>
+            <a href="#explore">Explore</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="row">
+        <div class="leftcolumn">
+          <div class="card">
+            <h2>TITLE #1</h2>
+            <h5>Title description, Dec 7, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>Some text..</p>
+          </div>
+          <div class="card">
+            <h2>TITLE #2</h2>
+            <h5>Title description, Sep 2, 2017</h5>
+            <div class="fakeimg" style="height:200px;">Image</div>
+            <p>ghdghfjhjsahf gudgwudkf ugduwgud yuwgd6wd hudguwqfh nothing really happening here
+              just me making space for the example text</p>
+          </div>
+        </div>
+        <div class="rightcolumn">
+          <div class="card">
+            <h2>About Me</h2>
+            <div class="fakeimg" style="height:100px;">Image</div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+          </div>
+
+          <div class="card">
+            <h3>Follow Me</h3>
+            <p>Possibly include social icons here.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <h2>Footer</h2>
+      </div>
+  <app-root></app-root>
+</body>
+</html>
+
