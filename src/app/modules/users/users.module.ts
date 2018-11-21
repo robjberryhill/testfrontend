@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserlistComponent } from './components/userlist/userlist.component';
 import { UserprofileComponent } from './components/userprofile/userprofile.component';
 import { UsersignupComponent } from './components/usersignup/usersignup.component';
+import { UserupdateComponent } from './components/userupdate/userupdate.component';
 
 @NgModule({
   imports: [
@@ -13,6 +14,6 @@ import { UsersignupComponent } from './components/usersignup/usersignup.componen
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [UserlistComponent, UserprofileComponent, UsersignupComponent]
+  declarations: [UserlistComponent, UserprofileComponent, UsersignupComponent, UserupdateComponent]
 })
 export class UsersModule { }

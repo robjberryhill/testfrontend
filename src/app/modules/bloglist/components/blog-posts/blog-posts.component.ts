@@ -8,16 +8,12 @@ import { BlogService } from '../../services/blog.service';
   styleUrls: ['./blog-posts.component.css']
 })
 export class BlogPostsComponent implements OnInit {
-  /*staticPath: string = 'http://localhost:3001/blogList';*/
 
   blogPosts: BlogPost[];
 
   constructor(private blogService: BlogService) { }
 
   ngOnInit() {
-    /*this.http.get<BlogPost[]>(this.staticPath).subscribe(posts => {
-      this.blogPosts = posts;
-    });*/
     this.getBlogs();
   }
 

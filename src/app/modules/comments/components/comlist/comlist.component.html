@@ -1,0 +1,7 @@
+<h1>Comment List</h1>
+
+<div *ngFor="let com of comments">
+  <p>{{com.comId}} Comment Username Here:<small> Likes:</small> {{com.comLikes}} Date: {{com.comCreatedDate}}
+    <br/><a routerLink="/comments/{{com.comId}}">Details</a> Message: {{com.comMessage}}
+  </p>
+</div>

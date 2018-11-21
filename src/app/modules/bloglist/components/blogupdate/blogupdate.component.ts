@@ -1,14 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BlogPost } from 'src/app/shared/model/blog-post';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
 import { Location } from '@angular/common';
 
 
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-}; 
 @Component({
   selector: 'app-blogupdate',
   templateUrl: './blogupdate.component.html',
@@ -21,10 +17,6 @@ export class BlogupdateComponent implements OnInit {
   constructor(private blogService: BlogService, private route: ActivatedRoute, private location: Location) { }
 
   ngOnInit() {
-    /*const id = +this.route.snapshot.paramMap.get('id')
-    this.http.get<BlogPost>(this.staticPath + id).subscribe(blog => {
-      this.blog = blog;
-    });*/
     this.getUpdateId();
   }
 

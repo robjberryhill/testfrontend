@@ -7,6 +7,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { BloglistModule } from './modules/bloglist/bloglist.module';
 import { UsersModule } from './modules/users/users.module';
+import { CommentsModule } from './modules/comments/comments.module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { UsersModule } from './modules/users/users.module';
     HttpClientModule,
     AppRoutingModule,
     BloglistModule,
+    CommentsModule,
     UsersModule,
     FormsModule,
     ReactiveFormsModule

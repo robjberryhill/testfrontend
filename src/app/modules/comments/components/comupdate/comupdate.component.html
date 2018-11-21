@@ -1,0 +1,18 @@
+<h1>Update Your Comment</h1>
+
+<div *ngIf="comment">
+  <h3>Titled: {{comment.blogPost.blogTitle}}</h3>
+  <h4>By User: {{comment.user.userName}}</h4>
+  <p>Message: {{comment.comMessage}}</p>
+
+<div>
+  <div>
+      <label>
+          <textarea placeholder="message" [(ngModel)]="comment.comMessage"></textarea>
+      </label>
+  </div>
+  <div>
+    <button (click)="updateCom()">Update Comment</button>
+  </div>
+  </div>
+</div>
