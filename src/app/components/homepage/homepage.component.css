@@ -1,29 +1,24 @@
 
-/* Header/Blog Title */
-.div {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: grey;
-  }
+
+
 
   /* Create two unequal columns that floats next to each other */
   /* Left column */
   .leftcolumn {
-  float: left;
+  float: center;
   width: 75%;
   }
 
   /* Right column */
   .rightcolumn {
-  float: left;
+  float: center;
   width: 25%;
   padding-left: 20px;
   }
 
   /* Add a card effect for articles */
 .card {
-  background-color: white;
+  background-color: rgba(20, 20, 20, 0.062);
   padding: 20px;
   margin-top: 20px;
   }
