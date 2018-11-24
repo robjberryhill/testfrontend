@@ -1,7 +1,8 @@
 <h1>Blog Posts</h1>
 
 <div *ngFor="let post of blogPosts">
-  <p>{{post.blogPhoto}} Title: <a routerLink="/blogList/{{post.blogId}}"><b>{{post.blogTitle}}</b></a><small> Views:</small> {{post.blogViews}}<small> Likes:</small> {{post.blogLikes}} Date: {{post.blogDate}}
+  <img src="{{post.blogPhoto}}">
+  <p>Title: <a routerLink="/blogList/{{post.blogId}}"><b>{{post.blogTitle}}</b></a><small> Views:</small> {{post.blogViews}}<small> Likes:</small> {{post.blogLikes}} Date: {{post.blogDate}}
     <br/>Message: {{post.blogMessage}}
   </p>
 </div>

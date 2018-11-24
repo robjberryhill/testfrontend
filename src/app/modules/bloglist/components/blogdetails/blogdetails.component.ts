@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { BlogPost } from 'src/app/shared/model/blog-post';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { environment } from '../../../../../environments/environment';
+
 
 @Component({
   selector: 'app-blogdetails',
@@ -9,11 +12,16 @@ import { BlogService } from '../../services/blog.service';
   styleUrls: ['./blogdetails.component.css']
 })
 export class BlogdetailsComponent implements OnInit {
-  staticPath: string = 'http://localhost:3001/blogList/';
   blog: BlogPost;
+  private beUrl = environment.backendUrl;
+  private blogPath = this.beUrl;
 
 
-  constructor(private blogService: BlogService, private route: ActivatedRoute) { }
+  constructor(
+    private blogService: BlogService,
+    private route: ActivatedRoute,
+    private http: HttpClient
+    ) { }
 
   ngOnInit() {
     this.getBlogDetailId();
@@ -30,5 +38,4 @@ export class BlogdetailsComponent implements OnInit {
     this.blogService.deleteBlogPost(id).subscribe();
     window.location.href = '/blogs';
   }
-
 }

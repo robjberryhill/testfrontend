@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BlogPost } from '../../../shared/model/blog-post';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 import { environment } from '../../../../environments/environment';
 
 const httpOptions = {
@@ -20,6 +21,11 @@ export class BlogService {
   getBlogPosts(): Observable<BlogPost[]> {
     return this.http.get<BlogPost[]> (this.blogPath)
   };
+
+  getViewBlogPosts(): Observable<BlogPost[]> {
+    return this.http.get<BlogPost[]> (this.blogPath)
+  };
+
 
   getBlogId(id: number): Observable<BlogPost> {
     const url = `${this.blogPath}/${id}`;
@@ -40,5 +46,11 @@ export class BlogService {
     return this.http.delete(url);
   }
 
-  constructor(private http: HttpClient) { }
+  imgUploadSvc(imgToUpload: File, id: number): Observable<any> {
+    const url = `${this.beUrl}/uploadBlgImg/${id}`;
+    const fData = new FormData();
+    fData.append('image', imgToUpload, imgToUpload.name)
+    return this.http.post(url, fData, {reportProgress: true});
+  }
+  constructor(private http: HttpClient, private route: ActivatedRoute,) { }
 }

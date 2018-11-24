@@ -1,0 +1,44 @@
+.mainImg {
+    top: 0;
+    background-image: url('http://localhost:3001/images/plchldr01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 540px;
+}
+.mainSignup {
+    text-align: center;
+    padding-top: 225px;
+}
+.middleSignup{
+    opacity: .65;
+    background-color: lightgrey;
+    color: black;
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    box-shadow: 0px 2px 5px;
+}
+.middleSignup a {
+    text-decoration: none;
+}
+.grid {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+}
+.blogs {
+    margin: auto;
+    width: 400px;
+    height: 500px;
+    box-shadow: 5px 2px 8px 0px;
+}
+.blgImg {
+    width: 100%;
+    height: 400px;
+}
+.smlDate {
+    font-size: x-small;
+}
+.smlVls {
+    font-size: x-small;
+}

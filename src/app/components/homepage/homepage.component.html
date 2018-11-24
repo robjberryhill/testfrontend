@@ -1,5 +1,22 @@
-<h3>This is Home Page!</h3>
-
+<!--
+  <img src="http://localhost:3001/images/plchldr01.jpg">
+-->
+<div class="mainImg">
+  <div class="mainSignup">
+    <span class="middleSignup"><a routerLink="/signup">SIGNUP</a></span>
+  </div>
+</div>
 <div>
-  <p>Welcome to your home page.</p>
+  <h2>Latest Blogs</h2>
+</div>
+<div class="grid">
+<div 
+  class="blogs"
+  *ngFor="let post of blogPosts | slice:0:2"
+>
+  <p class="smlDate">Posted: {{post.blogDate}}</p>
+  <p>Title: <a routerLink="/blogList/{{post.blogId}}">{{post.blogTitle}}</a></p>
+  <img class="blgImg" src="{{post.blogPhoto}}">
+  <p class="smlVls">Views: {{post.blogViews}} Likes: {{post.blogLikes}}</p>
+</div>
 </div>
