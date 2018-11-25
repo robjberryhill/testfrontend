@@ -3,6 +3,9 @@
 <div *ngIf="blog">
   <h3>Titled: {{blog.blogTitle}}</h3>
   <p>Message: {{blog.blogMessage}}</p>
+  <div>
+    <img src="{{blog.blogPhoto}}">
+  </div>
 </div>
 <div>
   <div>
@@ -18,4 +21,6 @@
   <div>
     <button (click)="updateBlog()">Update Blog</button>
   </div>
+  <input type="file" name="img" (change)="picSelected($event.target.files)">
+<button type="button" (click)="imgUpload()">Upload Image</button>
 </div>
