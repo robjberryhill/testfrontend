@@ -3,6 +3,10 @@
     font-family: 'Dancing Script';
   }
 
+  .row {
+    position: right;
+  }
+
 
 
   /* Create two unequal columns that floats next to each other */
