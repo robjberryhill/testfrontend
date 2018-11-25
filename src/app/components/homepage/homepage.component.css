@@ -1,9 +1,6 @@
-  .h1 {
-    font-family: 'Noto Serif', serif;
-  }
 
   .p {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script';
   }
 
 
@@ -27,12 +24,13 @@
   background-color: rgba(20, 20, 20, 0.062);
   padding: 20px;
   margin-top: 20px;
+  position: relative;
   }
 
   /* Clear floats after the columns */
   .row:after {
   content: "";
-  display: table;
+  display: center;
   clear: both;
   }
 
