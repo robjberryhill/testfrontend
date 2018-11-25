@@ -1,3 +1,13 @@
+  .h1 {
+    font-family: 'Noto Serif', serif;
+  }
+
+  .p {
+    font-family: 'Dancing Script', cursive;
+  }
+
+
+
   /* Create two unequal columns that floats next to each other */
   /* Left column */
   .leftcolumn {
