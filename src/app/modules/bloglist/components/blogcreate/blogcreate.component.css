@@ -1,0 +1,11 @@
+.blogForm {
+  background-color: grey;
+}
+
+.blogForm {
+  border: 2px solid black;
+  outline: rgb(228, 227, 230) solid 100px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+}
