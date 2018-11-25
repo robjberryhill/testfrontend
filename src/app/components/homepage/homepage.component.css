@@ -1,40 +1,26 @@
-
+.background {
+  background-color: lightgray;
+}
   .quote {
     font-family: 'Dancing Script';
+    position: center;
   }
 
   .row {
     position: right;
   }
 
+.img {
+  size: 0em
+}
 
-
-  /* Create two unequal columns that floats next to each other */
-  /* Left column */
-  .leftcolumn {
-  float: center;
-  width: 75%;
-  }
-
-  /* Right column */
-  .rightcolumn {
-  float: center;
-  width: 25%;
-  padding-left: 20px;
-  }
-
-  /* Add a card effect for articles */
 .card {
-  background-color: rgba(20, 20, 20, 0.062);
-  padding: 20px;
-  margin-top: 20px;
-  position: relative;
+  background-color: whitesmoke;
+  padding: 1px;
+  margin-top: 1px;
+  border: 1px solid grey;
+  position: center;
   }
 
-  /* Clear floats after the columns */
-  .row:after {
-  content: "";
-  display: center;
-  clear: both;
-  }
+
 
