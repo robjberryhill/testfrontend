@@ -1,0 +1,12 @@
+.card {
+  background-color: whitesmoke;
+  padding: 1px;
+  margin-top: 1px;
+  border: 1px solid grey;
+  position: center;
+  }
+
+  .row {
+    position: right;
+  }
+
