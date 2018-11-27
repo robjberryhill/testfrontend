@@ -13,6 +13,7 @@ import { ComlistComponent } from './modules/comments/components/comlist/comlist.
 import { ComdetailsComponent } from './modules/comments/components/comdetails/comdetails.component';
 import { ComupdateComponent } from './modules/comments/components/comupdate/comupdate.component';
 import { ComcreateComponent } from './modules/comments/components/comcreate/comcreate.component';
+import { BlogbioComponent } from './components/blogbio/blogbio.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomepageComponent
+  },
+  {
+    path: 'bio',
+    component: BlogbioComponent
   },
   {
     path: 'blogCreate',

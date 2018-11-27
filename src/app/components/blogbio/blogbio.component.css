@@ -1,0 +1,9 @@
+.bioImg {
+    top: 0;
+    background-image: url('http://localhost:3001/images/plchldr01.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 540px;
+    border-bottom: 10px solid rgb(58, 58, 58);
+}

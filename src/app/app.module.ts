@@ -8,11 +8,13 @@ import { HomepageComponent } from './components/homepage/homepage.component';
 import { BloglistModule } from './modules/bloglist/bloglist.module';
 import { UsersModule } from './modules/users/users.module';
 import { CommentsModule } from './modules/comments/comments.module';
+import { BlogbioComponent } from './components/blogbio/blogbio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
+    BlogbioComponent,
   ],
   imports: [
     BrowserModule,
