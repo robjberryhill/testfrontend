@@ -7,7 +7,7 @@
   font-family: 'Playfair Display SC', serif;
 }
   .quote {
-    font-family: 'Playfair Display SC', serif;
+
     position: center;
   }
 
@@ -15,9 +15,7 @@
     position: right;
   }
 
-.img {
-  size: 0em
-}
+
 
 .card {
   background-color: whitesmoke;
@@ -25,6 +23,7 @@
   margin-top: 1px;
   border: 1px solid grey;
   position: center;
+  font-family: 'Playfair Display SC', serif;
   }
 
   .card:hover {
