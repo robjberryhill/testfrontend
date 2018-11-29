@@ -20,7 +20,7 @@ ul a {
 
 ul a:hover {
   background-color: #555;
-  color: white;
+  color: lightgray;
   cursor: -webkit-grab;
 }
 
@@ -32,6 +32,8 @@ div {
 .nav {
   background-color: #333;
   overflow: hidden;
+  font-family: 'Playfair Display SC', serif;
+
 }
 
 /* Style the links inside the navigation bar */
