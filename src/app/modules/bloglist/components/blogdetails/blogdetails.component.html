@@ -1,15 +1,60 @@
-
-
-<h1>
-  <img src="src/app/modules/bloglist/components/blogdetails/BlogDetailsGraphic.jpg">
-</h1>
-<div class="style">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
-<div *ngIf="blog">
-  <div>
-    <img src="{{blog.blogPhoto}}">
+<div class="detailPage">
+  <h1>
+    <img src="src/app/modules/bloglist/components/blogdetails/BlogDetailsGraphic.jpg">
+  </h1>
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+  <div class="grid" *ngIf="blog">
+    <div class="col-4-12">
+      <img src="{{blog.blogPhoto}}">
+    </div>
+    <div class="col-8-12">
+      <h3>{{blog.blogTitle}}</h3>
+      <h6 class="blgCt">Blog Content:</h6>
+      <p class="blDate">Date: {{blog.blogDate}}</p>
+      <p>{{blog.blogMessage}}</p>
+      <p class="smlVls">Views: {{blog.blogViews}} Likes: {{blog.blogLikes}}</p>
+      <div class="updateBlog">
+          <span><a routerLink="/blogUpdate/{{blog.blogId}}">UPDATE</a></span>
+      </div>
+      <div class="deleteBlog" (click)="deleteBlog()">
+          <span>DELETE BLOG</span>
+      </div>
+    </div>
   </div>
-  <h3>{{blog.blogTitle}}<span> <a routerLink="/blogUpdate/{{blog.blogId}}">Update</a></span></h3>
-  <button (click)="deleteBlog()">Delete Blog</button>
 </div>
-</div>
+  <div class="grid2">
+    <div class="col-12-12">
+      <div class="comDt" *ngFor="let com of comments">
+        <h6 class="comUsr">By: <span class="usrNm">{{com.user.userName}}</span></h6>
+        <p routerLink="/comments/{{com.comId}}" ><span class="comMes">{{com.comMessage}}</span> </p>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="col-12-12">
+        <div>
+            <form #comData="ngForm" (ngSubmit)="addCom(comData.value)">
+              <div>
+                <label for="comMessage">Comment: </label><br/>
+                <textarea type="text" placeholder="Comment Message" name="comMessage" required ngModel></textarea>
+              </div>
+              <div>
+                <button class="postCom" type="submit">Post Comment</button>
+              </div>
+            </form>
+          </div>
+    </div>
+  </div>
+  </div>
+  <div class="footer">
+      <div class="col-6-12">
+          <h6 class="compInfo">&copy; 2018 Aliquam lectus sem, posuere sed dignissim vitae, posuere at urna.</h6>
+      </div>
+      <div class="col-6-12">
+          <div class="icon">
+              <a href="http://www.facebook.com" target="_blank"><img src="../assets/icons/iconfinder_facebook_circle_black_107153.png"></a>
+              <a href="http://www.instagram.com" target="_blank"><img src="../assets/icons/iconfinder_38-instagram_104466.png"></a> 
+              <a href="http://www.twitter.com" target="_blank"><img src="../assets/icons/iconfinder_43-twitter_104461.png"></a> 
+              <a href="http://www.youtube.com" target="_blank"><img src="../assets/icons/iconfinder_youtube-social-media_765195.png"></a>
+          </div>
+      </div> 
+  </div>
