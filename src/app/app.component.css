@@ -25,4 +25,6 @@ ul a:hover {
   color: white;
 }
 
-
+div {
+  cursor:crosshair;
+}
