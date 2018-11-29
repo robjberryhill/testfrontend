@@ -26,5 +26,10 @@
   position: center;
   }
 
+  .card:hover {
+    box-shadow: 0 8px 16px 0 black;
+}
+
+
 
 

@@ -9,7 +9,7 @@ import { BlogPost } from 'src/app/shared/model/blog-post';
 })
 export class HomepageComponent implements OnInit {
 
-  blogPosts: BlogPost[]
+  blogPosts: BlogPost[];
 
   constructor(private blogService: BlogService) { }
 
