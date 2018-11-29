@@ -1,12 +1,13 @@
-.card {
-  background-color: whitesmoke;
-  padding: 1px;
-  margin-top: 1px;
-  border: 1px solid grey;
-  position: center;
-  }
 
-  .row {
-    position: right;
-  }
+  .card {
+    box-shadow: 0 4px 8px 0 black;
+    transition: 0.3s;
+}
 
+.card:hover {
+    box-shadow: 0 8px 16px 0 black;
+}
+
+.container {
+    padding: 2px 16px black;
+}

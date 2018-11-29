@@ -4,6 +4,7 @@
 
 <h1>Blog Posts</h1>
 
+        <div class="card">
 <div *ngFor="let post of blogPosts">
   <img src="{{post.blogPhoto}}">
   <p>Title: <a routerLink="/blogList/{{post.blogId}}"><b>{{post.blogTitle}}</b></a><small> Views:</small> {{post.blogViews}}<small> Likes:</small> {{post.blogLikes}} Date: {{post.blogDate}}
@@ -11,4 +12,4 @@
   </p>
 </div>
 </div>
-
+</div>
