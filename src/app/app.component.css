@@ -57,3 +57,17 @@ div {
   background-color: #4CAF50;
   color: white;
 }
+
+
+.h1 {
+
+  height: auto;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 10000px) {
+
+  .menu, .main {
+      width: 50%;
+  }
+}

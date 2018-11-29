@@ -1,9 +1,11 @@
+
+
+
 .div {
   cursor:crosshair;
 }
 
 .background {
-  background-color: lightgray;
   font-family: 'Playfair Display SC', serif;
 }
   .quote {
@@ -33,3 +35,21 @@
 
 
 
+.img {
+  height: auto;
+  max-width: 100%;
+}
+
+.background {
+  height: auto;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+      background-color: lightblue;
+  }
+  .menu, .main {
+      width: 100%;
+  }
+}
