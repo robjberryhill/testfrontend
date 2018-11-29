@@ -1,0 +1,11 @@
+.style {
+  background-color: lightgray;
+}
+
+.blog {
+  background-color: whitesmoke;
+  padding: 1px;
+  margin-top: 1px;
+  border: 1px solid black;
+  position: center;
+ }
