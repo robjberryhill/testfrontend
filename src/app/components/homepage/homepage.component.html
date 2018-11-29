@@ -37,3 +37,20 @@
     </div>
     </div>
   </div>
+  <div>
+    <h2>Latest Blogs</h2>
+  </div>
+  <div class="grid">
+  <div 
+    class="blogs"
+    *ngFor="let post of blogPosts | slice:0:2"
+    routerLink="/blogList/{{post.blogId}}"
+  >
+    <p class="smlDate">Posted: {{post.blogDate}}</p>
+    <p>{{post.blogTitle}}</p>
+    <div class="blgImgCrop">
+        <img class="blgImg" src="{{post.blogPhoto}}">
+    </div>
+    <p class="smlVls">Views: {{post.blogViews}} Likes: {{post.blogLikes}}</p>
+  </div>
+  </div>

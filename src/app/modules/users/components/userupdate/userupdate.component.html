@@ -1,45 +1,50 @@
-<h1>Update Your Profile</h1>
-
-<div *ngIf="user">
-  <h3> {{user.firstName}}  {{user.lastName}} </h3>
-  <p>{{user.userPhoto}}</p>
-  <p>Birthday: {{user.birthDay}}
-    <br/>Email: {{user.userEmail}}
-    <br/>Phone: {{user.phoneNumer}}
-  </p>
+<div class="profilePage">
+  <div class="grid" *ngIf="user">
+    <div class="col-4-12">
+      <img src="{{user.userPhoto}}">
+    </div>
+    <div class="col-8-12">
+      <h3>{{user.firstName}} {{user.lastName}} Profile</h3>
+      <h6 class="usrDt">User Details:</h6>
+      <p class="usrDate">Created On: {{user.userCreatedDate}}</p> 
+      <p class="userBdate">Birthday: {{user.birthDay}}</p>
+      <p class="userEmail">Email: {{user.userEmail}}</p>
+      <p class="userPhone">Phone: {{user.phoneNumer}}</p>
+    </div>
+  </div>
 </div>
+<div class="upForm">
+<h6>First Name:</h6>
 <div>
-  <div>
+  <label>
+    <input type="text" placeholder="First Name" [(ngModel)]="user.firstName">
+  </label> 
+</div>
+<h6>Last Name:</h6>
+<div>
+  <label>
+      <input type="text" placeholder="Last Name" [(ngModel)]="user.lastName">
+  </label> 
+</div>
+<h6>Birthday:</h6>
+<div>
     <label>
-      <input type="text" placeholder="First Name" [(ngModel)]="user.firstName">
+      <input type="date" placeholder="Birthday" [(ngModel)]="user.birthDay">
     </label> 
-  </div>
-  <div>
+</div>
+<h6>Email:</h6>
+<div>
     <label>
-        <input type="text" placeholder="Last Name" [(ngModel)]="user.lastName">
+      <input type="email" placeholder="Email" [(ngModel)]="user.userEmail">
     </label> 
-  </div>
-  <div>
-      <label>
-        <input type="text" placeholder="Photo Path" [(ngModel)]="user.userPhoto">
-      </label> 
-  </div>
-  <div>
-      <label>
-        <input type="date" placeholder="Birthday" [(ngModel)]="user.birthDay">
-      </label> 
-  </div>
-  <div>
-      <label>
-        <input type="email" placeholder="Email" [(ngModel)]="user.userEmail">
-      </label> 
-  </div>
-  <div>
-      <label>
-        <input type="number" placeholder="Phone Number" [(ngModel)]="user.phoneNumer">
-      </label> 
-  </div>  
-  <div>
-    <button (click)="updateUser()">Update Blog</button>
-  </div>
+</div>
+<h6>Phone:</h6>
+<div>
+    <label>
+      <input type="number" placeholder="Phone Number" [(ngModel)]="user.phoneNumer">
+    </label> 
+</div>  
+<div>
+  <button class="styleButton" (click)="updateUser()">Edit Profile</button>
+</div>
 </div>

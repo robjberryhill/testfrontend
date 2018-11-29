@@ -1,0 +1,23 @@
+input {
+    margin-bottom: 5px;
+}
+label {
+    font-size: small;
+    color: rgb(70, 70, 70);
+}
+
+.styleButton {
+    margin-top: 10px;
+    background-color: grey;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.styleButton:hover {
+    background-color: white;
+    color: black;
+}

@@ -22,5 +22,27 @@
   position: center;
   }
 
-
+.grid {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+}
+.blogs {
+  cursor: pointer;
+    margin: auto;
+    width: 400px;
+    min-height: 500px;
+    height: 100%;
+    box-shadow: 2px 3px 10px 5px rgb(80, 80, 80);
+}
+.blgImg {
+    width: 95%;
+    height: 95%;
+}
+.smlDate {
+    font-size: x-small;
+}
+.smlVls {
+    font-size: x-small;
+}
 

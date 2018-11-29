@@ -1,42 +1,47 @@
 <div>
-  <h3>Sign Up</h3>
+  <h3>Create an Account</h3>
 </div>
 <div>
   <form #userData="ngForm" (ngSubmit)="addUser(userData.value)">
     <div>
-      <label for="firstName">First Name:</label>
+      <label for="firstName">First Name:</label><br/>
       <input type="text" placeholder="First Name" name="firstName" required ngModel>
     </div>
     <div>
-      <label for="lastName">Last Name:</label>
+      <label for="lastName">Last Name:</label><br/>
       <input type="text" placeholder="Last Name" name="lastName" required ngModel>
     </div>
     <div>
-      <label for="userPhoto">Photo:</label>
+      <label for="userPhoto">Photo:</label><br/>
       <input type="text" placeholder="Photo Path" name="userPhoto" required ngModel>
     </div>
     <div>
-      <label for="birthDay">Birthday:</label>
+      <label for="birthDay">Birthday:</label><br/>
       <input type="date" placeholder="Birthday" name="birthDay" required ngModel>
     </div>
     <div>
-      <label for="userEmail">Email:</label>
+      <label for="userEmail">Email:</label><br/>
       <input type="email" placeholder="Email" name="userEmail" required ngModel>
     </div>
     <div>
-      <label for="phoneNumer">Phone:</label>
+      <label for="phoneNumer">Phone:</label><br/>
       <input type="number" placeholder="Phone Number" name="phoneNumer" required ngModel>
     </div>
     <div>
-      <label for="userName">Username:</label>
+      <label for="userName">Username:</label><br/>
       <input type="text" placeholder="Username" name="userName" required ngModel>
     </div>
     <div>
-      <label for="passWord">Password:</label>
+      <label for="passWord">Password:</label><br/>
       <input type="text" placeholder="Password" name="passWord" required ngModel>
     </div>
     <div>
-      <button type="submit">Create User</button>
+      <button class="styleButton" type="submit">Sign Up</button>
     </div>
   </form>
+</div>
+<div>
+  <div>
+    <button routerLink="/users" class="styleButton" type="button">User List</button>
+  </div>
 </div>

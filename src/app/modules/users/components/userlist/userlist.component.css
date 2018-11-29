@@ -1,0 +1,13 @@
+.userList {
+    cursor: pointer;
+    text-align: left;
+    margin-left: 20px;
+}
+.userName {
+    font-weight: bold;
+    color: rgb(70, 70, 70);
+}
+.userInfo {
+    font-size: small;
+    color: grey;
+}

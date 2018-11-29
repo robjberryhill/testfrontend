@@ -1,8 +1,17 @@
-<h1>Blog Posts</h1>
-
-<div *ngFor="let post of blogPosts">
-  <img src="{{post.blogPhoto}}">
-  <p>Title: <a routerLink="/blogList/{{post.blogId}}"><b>{{post.blogTitle}}</b></a><small> Views:</small> {{post.blogViews}}<small> Likes:</small> {{post.blogLikes}} Date: {{post.blogDate}}
-    <br/>Message: {{post.blogMessage}}
-  </p>
+<div class="grid">
+  <div 
+    class="blogs"
+    *ngFor="let post of blogPosts"
+    routerLink="/blogList/{{post.blogId}}"
+  >
+    <p class="smlDate">Posted: {{post.blogDate}}</p>
+    <p>{{post.blogTitle}}</p>
+    <div class="blgImgCrop">
+        <img class="blgImg" src="{{post.blogPhoto}}">
+    </div>
+    <p class="smlVls">Views: {{post.blogViews}} Likes: {{post.blogLikes}}</p>
+  </div>
+  </div>
+<div class="createBlog">
+  <span><a routerLink="/blogCreate">CREATE A BLOG</a></span>
 </div>

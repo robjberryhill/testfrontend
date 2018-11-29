@@ -1,0 +1,37 @@
+.grid {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.blogs {
+    margin: auto;
+    margin-top: 20px;
+    width: 400px;
+    min-height: 500px;
+    height: 100%;
+    box-shadow: 2px 3px 10px 5px rgb(80, 80, 80);
+    cursor: pointer;
+}
+.blgImg {
+    max-width:  95%;
+    max-height: 95%;
+}
+.smlDate {
+    font-size: x-small;
+}
+.smlVls {
+    font-size: x-small;
+}
+.createBlog a {
+    background-color: grey;
+    color: white;
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+.createBlog a:hover {
+    background-color: white;
+    color: black;
+}

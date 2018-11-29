@@ -1,8 +1,12 @@
 <h1>User List</h1>
 
-<div *ngFor="let user of users">
+<div
+  routerLink="/profile/{{user.userId}}"
+  *ngFor="let user of users"
+  class="userList"
+>
   <p>
-    Photo: {{user.userPhoto}} Name: <a routerLink="/profile/{{user.userId}}">{{user.firstName}} {{user.lastName}}</a> 
-    Birthday: {{user.birthDay}} Email: {{user.userEmail}} Phone: {{user.phoneNumer}}
+    <span class="userName">{{user.firstName}} {{user.lastName}} </span>
+    <span class="userInfo">Birthday: {{user.birthDay}} Email: {{user.userEmail}} Phone: {{user.phoneNumer}}</span>
   </p>
 </div>

@@ -1,9 +1,42 @@
-<h1>Blog Details</h1>
-
-<div *ngIf="blog">
-  <div>
-    <img src="{{blog.blogPhoto}}">
+<div class="detailPage">
+  <div class="grid" *ngIf="blog">
+    <div class="col-4-12">
+      <img src="{{blog.blogPhoto}}">
+    </div>
+    <div class="col-8-12">
+      <h3>{{blog.blogTitle}}</h3>
+      <h6 class="blgCt">Blog Content:</h6>
+      <p class="blDate">Date: {{blog.blogDate}}</p>
+      <p>{{blog.blogMessage}}</p>
+      <p class="smlVls">Views: {{blog.blogViews}} Likes: {{blog.blogLikes}}</p>
+      <div class="updateBlog">
+          <span><a routerLink="/blogUpdate/{{blog.blogId}}">UPDATE</a></span>
+      </div>
+      <div class="deleteBlog" (click)="deleteBlog()">
+          <span>DELETE BLOG</span>
+      </div>
+    </div>
   </div>
-  <h3>{{blog.blogTitle}}<span> <a routerLink="/blogUpdate/{{blog.blogId}}">Update</a></span></h3>
-  <button (click)="deleteBlog()">Delete Blog</button>
-</div>
+  <div class="grid">
+    <div class="col-12-12">
+      <div class="comDt" *ngFor="let com of comments">
+        <h6 class="comUsr">By: <span class="usrNm">{{com.user.userName}}</span></h6>
+        <p routerLink="/comments/{{com.comId}}" ><span class="comMes">{{com.comMessage}}</span> </p>
+    </div>
+  </div>
+  <div class="grid">
+    <div class="col-12-12">
+        <div>
+            <form #comData="ngForm" (ngSubmit)="addCom(comData.value)">
+              <div>
+                <label for="comMessage">Comment: </label><br/>
+                <textarea type="text" placeholder="Comment Message" name="comMessage" required ngModel></textarea>
+              </div>
+              <div>
+                <button class="postCom" type="submit">Post Comment</button>
+              </div>
+            </form>
+          </div>
+    </div>
+  </div>
+  </div>

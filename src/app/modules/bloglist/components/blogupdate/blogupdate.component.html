@@ -1,26 +1,38 @@
-<h1>Update Your Blog</h1>
+<h1>Edit Your Blog</h1>
 
-<div *ngIf="blog">
-  <h3>Titled: {{blog.blogTitle}}</h3>
-  <p>Message: {{blog.blogMessage}}</p>
-  <div>
+<div class="grid"*ngIf="blog">
+  <div class="col-4-12">
     <img src="{{blog.blogPhoto}}">
   </div>
+  <div class="col-8-12">
+    <h3>{{blog.blogTitle}}</h3>
+    <h6>Blog Content:</h6>
+    <p class="blDate">Date: {{blog.blogDate}}</p>
+    <p>{{blog.blogMessage}}</p>
+    <p class="smlVls">Views: {{blog.blogViews}} Likes: {{blog.blogLikes}}</p>
+  </div>
 </div>
-<div>
+<div class="upForm">
+  <div><h4>Title: </h4></div>
   <div>
     <label>
       <input placeholder="Title" [(ngModel)]="blog.blogTitle">
     </label> 
   </div>
+  <div><h4>Content: </h4></div>
   <div>
       <label>
           <textarea placeholder="message" [(ngModel)]="blog.blogMessage"></textarea>
       </label>
   </div>
-  <div>
-    <button (click)="updateBlog()">Update Blog</button>
+  <div (click)="updateBlog()" class="upBlog">
+    <span>UPDATE</span>
   </div>
-  <input type="file" name="img" (change)="picSelected($event.target.files)">
-<button type="button" (click)="imgUpload()">Upload Image</button>
+  <input style="display:none" type="file" name="img" (change)="picSelected($event.target.files)" #filePick>
+  <div (click)="filePick.click()" class="upBlog">
+    <span>CHOOSE IMAGE</span>
+  </div>
+  <div (click)="imgUpload()" class="upBlog">
+      <span>UPLOAD IMAGE</span>
+  </div>
 </div>
