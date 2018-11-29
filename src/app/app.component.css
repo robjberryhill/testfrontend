@@ -2,10 +2,27 @@ div {
     text-align: center;
 
 }
-a {
-    margin: 3px;
-}
 
-h1 {
+.h1 {
   font-family: 'Noto Serif', serif;
 }
+
+.nav {
+
+    display: block;
+    width: 4px;
+}
+
+ul a {
+  display: center;
+  color:black;
+  padding: 2px 4px;
+  text-decoration: none;
+}
+
+ul a:hover {
+  background-color: #555;
+  color: white;
+}
+
+
