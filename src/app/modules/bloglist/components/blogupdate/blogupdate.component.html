@@ -1,3 +1,4 @@
+<div class="style">
 <h1>Update Your Blog</h1>
 
 <div *ngIf="blog">
@@ -11,7 +12,7 @@
   <div>
     <label>
       <input placeholder="Title" [(ngModel)]="blog.blogTitle">
-    </label> 
+    </label>
   </div>
   <div>
       <label>
@@ -23,4 +24,5 @@
   </div>
   <input type="file" name="img" (change)="picSelected($event.target.files)">
 <button type="button" (click)="imgUpload()">Upload Image</button>
+</div>
 </div>
