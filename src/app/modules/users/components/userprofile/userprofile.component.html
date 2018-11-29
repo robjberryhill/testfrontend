@@ -1,13 +1,34 @@
-<div *ngIf="user">
-  <h1>{{user.firstName}} {{user.lastName}} Profile</h1>
-  <p>
-    {{user.userPhoto}} Birthday: {{user.birthDay}} 
-    Email: {{user.userEmail}} Phone: {{user.phoneNumer}}
-  </p>
-  <div>
-    <a routerLink="/userUpdate/{{user.userId}}">Update</a>
+<div class="profilePage">
+  <div class="grid" *ngIf="user">
+    <div class="col-4-12">
+      <img src="{{user.userPhoto}}">
+    </div>
+    <div class="col-8-12">
+      <h3>{{user.firstName}} {{user.lastName}} Profile</h3>
+      <h6>User Details:</h6>
+      <p class="usrDate">Created On: {{user.userCreatedDate}}</p> 
+      <p class="userBdate">Birthday: {{user.birthDay}}</p>
+      <p class="userEmail">Email: {{user.userEmail}}</p>
+      <p class="userPhone">Phone: {{user.phoneNumer}}</p>
+      <div routerLink="/userUpdate/{{user.userId}}" class="styleButton">
+          <span>Edit Profile</span>
+      </div>
+      <div>
+          <button class="styleButton" (click)="deleteUser()">Delete Profile</button>
+      </div>
+    </div>
   </div>
-  <div>
-      <button (click)="deleteUser()">Delete Profile</button>
-  </div>
+</div>
+<div class="footer">
+    <div class="col-6-12">
+        <h6 class="compInfo">&copy; 2018 Aliquam lectus sem, posuere sed dignissim vitae, posuere at urna.</h6>
+    </div>
+    <div class="col-6-12">
+        <div class="icon">
+            <a href="http://www.facebook.com" target="_blank"><img src="../assets/icons/iconfinder_facebook_circle_black_107153.png"></a>
+            <a href="http://www.instagram.com" target="_blank"><img src="../assets/icons/iconfinder_38-instagram_104466.png"></a> 
+            <a href="http://www.twitter.com" target="_blank"><img src="../assets/icons/iconfinder_43-twitter_104461.png"></a> 
+            <a href="http://www.youtube.com" target="_blank"><img src="../assets/icons/iconfinder_youtube-social-media_765195.png"></a>
+        </div>
+    </div> 
 </div>

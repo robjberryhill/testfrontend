@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../services/blog.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../../../../environments/environment';
+import { Comments } from 'src/app/shared/model/comments';
+import { CommentService } from 'src/app/modules/comments/services/comment.service';
 
 
 @Component({
@@ -13,18 +15,18 @@ import { environment } from '../../../../../environments/environment';
 })
 export class BlogdetailsComponent implements OnInit {
   blog: BlogPost;
-  private beUrl = environment.backendUrl;
-  private blogPath = this.beUrl;
-
+  comments: Comments[];
 
   constructor(
     private blogService: BlogService,
+    private comService: CommentService,
     private route: ActivatedRoute,
     private http: HttpClient
     ) { }
 
   ngOnInit() {
     this.getBlogDetailId();
+    this.getComments();
   }
 
   getBlogDetailId(): void {
@@ -37,5 +39,19 @@ export class BlogdetailsComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.blogService.deleteBlogPost(id).subscribe();
     window.location.href = '/blogs';
+  }
+
+  getComments(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.comService.getBcoms(id).subscribe(comments => {
+      this.comments = comments;
+    });    
+  }
+  
+  addCom(data): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.comService.addComSrvc(data as Comments)
+    .subscribe(com => {this.comments.push(com)});
+    window.location.href = '/blogList/' + id;
   }
 }

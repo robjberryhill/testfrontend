@@ -14,10 +14,16 @@ const httpOptions = {
 export class CommentService {
   private beUrl = environment.backendUrl;
   private comPath = this.beUrl + '/comments';
+  private combId = this.beUrl + '/com';
 
   getComList(): Observable<Comments[]> {
     return this.http.get<Comments[]> (this.comPath)
   };
+
+  getBcoms(id: number): Observable<Comments[]> {
+    const url = `${this.combId}/${id}`;
+    return this.http.get<Comments[]>(url);
+  }
 
   getComId(id: number): Observable<Comments> {
     const url = `${this.comPath}/${id}`;

@@ -2,30 +2,55 @@
 <h1>
   <img src="src/app/modules/bloglist/components/blogupdate/UpdateBlogGraphic.jpg">
 </h1>
-<div class="style">
+<div class="upBlogPage">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
-<div *ngIf="blog">
-  <h3>Titled: {{blog.blogTitle}}</h3>
-  <p>Message: {{blog.blogMessage}}</p>
-  <div>
+<div class="grid"*ngIf="blog">
+  <div class="col-4-12">
     <img src="{{blog.blogPhoto}}">
   </div>
-</div>
-<div>
-  <div>
-    <label>
-      <input placeholder="Title" [(ngModel)]="blog.blogTitle">
-    </label>
+  <div class="col-8-12">
+    <h3>{{blog.blogTitle}}</h3>
+    <h6>Blog Content:</h6>
+    <p class="blDate">Date: {{blog.blogDate}}</p>
+    <p>{{blog.blogMessage}}</p>
+    <p class="smlVls">Views: {{blog.blogViews}} Likes: {{blog.blogLikes}}</p>
   </div>
-  <div>
+</div>
+</div>
+<div class="upForm">
+    <div><h4>Title: </h4></div>
+    <div>
       <label>
-          <textarea placeholder="message" [(ngModel)]="blog.blogMessage"></textarea>
+        <input placeholder="Title" [(ngModel)]="blog.blogTitle">
       </label>
-  </div>
-  <div>
-    <button (click)="updateBlog()">Update Blog</button>
-  </div>
-  <input type="file" name="img" (change)="picSelected($event.target.files)">
-<button type="button" (click)="imgUpload()">Upload Image</button>
+    </div>
+    <div><h4>Content: </h4></div>
+    <div>
+        <label>
+            <textarea rows="20" cols="70" placeholder="message" [(ngModel)]="blog.blogMessage"></textarea>
+        </label>
+    </div>
+    <div (click)="updateBlog()" class="upBlog">
+      <span>UPDATE</span>
+    </div>
+    <input style="display:none" type="file" name="img" (change)="picSelected($event.target.files)" #filePick>
+    <div (click)="filePick.click()" class="upBlog">
+      <span>CHOOSE IMAGE</span>
+    </div>
+    <div (click)="imgUpload()" class="upBlog">
+        <span>UPLOAD IMAGE</span>
+    </div>
 </div>
+<div class="footer">
+    <div class="col-6-12">
+        <h6 class="compInfo">&copy; 2018 Aliquam lectus sem, posuere sed dignissim vitae, posuere at urna.</h6>
+    </div>
+    <div class="col-6-12">
+        <div class="icon">
+            <a href="http://www.facebook.com" target="_blank"><img src="../assets/icons/iconfinder_facebook_circle_black_107153.png"></a>
+            <a href="http://www.instagram.com" target="_blank"><img src="../assets/icons/iconfinder_38-instagram_104466.png"></a> 
+            <a href="http://www.twitter.com" target="_blank"><img src="../assets/icons/iconfinder_43-twitter_104461.png"></a> 
+            <a href="http://www.youtube.com" target="_blank"><img src="../assets/icons/iconfinder_youtube-social-media_765195.png"></a>
+        </div>
+    </div> 
 </div>

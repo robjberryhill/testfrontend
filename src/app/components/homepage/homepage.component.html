@@ -2,18 +2,16 @@
 
 
 
-
+<div class="homePage">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
 <div class="img">
     <img src="src/app/components/homepage/Quote2Graphic.jpg">
     <div class="background">
     <img src="src/app/components/homepage/leavesfall.JPG"  >
-
-
+    </div>
 </div>
-
 <h1>Explore Posts</h1>
-
-<div class="row">
+<!--<div class="row">
 
     <div class="leftcolumn">
     <div class="card">
@@ -40,4 +38,33 @@ you have to leave with an answer, but it's learning to leave it as His feet.<br>
 4. REST, nap...Rest is holy. </p>
     </div>
     </div>
+  </div>-->
+  <div class="grid">
+  <div 
+    class="blogs"
+    *ngFor="let post of blogPosts | slice:0:2"
+    routerLink="/blogList/{{post.blogId}}"
+  >
+    <p class="smlDate">Posted: {{post.blogDate}}</p>
+    <p>{{post.blogTitle}}</p>
+    <div class="blgImgCrop">
+        <img class="blgImg" src="{{post.blogPhoto}}">
+    </div>
+    <p>{{post.blogMessage}}</p>
+    <p class="smlVls">Views: {{post.blogViews}} Likes: {{post.blogLikes}}</p>
+  </div>
+  </div>
+  </div>
+  <div class="footer">
+    <div class="col-6-12">
+        <h6 class="compInfo">&copy; 2018 Aliquam lectus sem, posuere sed dignissim vitae, posuere at urna.</h6>
+    </div>
+    <div class="col-6-12">
+        <div class="icon">
+            <a href="http://www.facebook.com" target="_blank"><img src="../assets/icons/iconfinder_facebook_circle_black_107153.png"></a>
+            <a href="http://www.instagram.com" target="_blank"><img src="../assets/icons/iconfinder_38-instagram_104466.png"></a> 
+            <a href="http://www.twitter.com" target="_blank"><img src="../assets/icons/iconfinder_43-twitter_104461.png"></a> 
+            <a href="http://www.youtube.com" target="_blank"><img src="../assets/icons/iconfinder_youtube-social-media_765195.png"></a>
+        </div>
+    </div> 
   </div>

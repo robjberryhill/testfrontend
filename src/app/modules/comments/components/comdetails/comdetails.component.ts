@@ -27,7 +27,7 @@ export class ComdetailsComponent implements OnInit {
   deleteCom(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.comService.deleteComSrvc(id).subscribe();
-    window.location.href = '/comments';
+    window.location.href = '/blogs';
   }
 
 }

@@ -1,17 +1,37 @@
-<div class="row">
-  <div class="leftcolumn">
-
-      <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
 <h1>
   <img src="src/app/modules/bloglist/components/blog-posts/BlogPostGraphic.jpg">
 </h1>
 
-        <div class="card">
-<div *ngFor="let post of blogPosts">
-  <img src="{{post.blogPhoto}}">
-  <p>Title: <a routerLink="/blogList/{{post.blogId}}"><b>{{post.blogTitle}}</b></a><small> Views:</small> {{post.blogViews}}<small> Likes:</small> {{post.blogLikes}} Date: {{post.blogDate}}
-    <br/>Message: {{post.blogMessage}}
-  </p>
+<div class="grid">
+  <div 
+    class="blogs"
+    *ngFor="let post of blogPosts"
+    routerLink="/blogList/{{post.blogId}}"
+  >
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
+
+    <p class="smlDate">Posted: {{post.blogDate}}</p>
+    <p>{{post.blogTitle}}</p>
+    <div class="blgImgCrop">
+        <img class="blgImg" src="{{post.blogPhoto}}">
+    </div>
+    <p class="smlVls">Views: {{post.blogViews}} Likes: {{post.blogLikes}}</p>
+  </div>
+  </div>
+<div class="createBlog">
+  <span><a routerLink="/blogCreate">CREATE A BLOG</a></span>
 </div>
-</div>
+<div class="footer">
+    <div class="col-6-12">
+        <h6 class="compInfo">&copy; 2018 Aliquam lectus sem, posuere sed dignissim vitae, posuere at urna.</h6>
+    </div>
+    <div class="col-6-12">
+        <div class="icon">
+            <a href="http://www.facebook.com" target="_blank"><img src="../assets/icons/iconfinder_facebook_circle_black_107153.png"></a>
+            <a href="http://www.instagram.com" target="_blank"><img src="../assets/icons/iconfinder_38-instagram_104466.png"></a> 
+            <a href="http://www.twitter.com" target="_blank"><img src="../assets/icons/iconfinder_43-twitter_104461.png"></a> 
+            <a href="http://www.youtube.com" target="_blank"><img src="../assets/icons/iconfinder_youtube-social-media_765195.png"></a>
+        </div>
+    </div> 
+  </div>
 
