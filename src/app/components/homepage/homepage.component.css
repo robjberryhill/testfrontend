@@ -92,19 +92,9 @@ div {
 
 .img {
   height: auto;
-  max-width: 100%;
+  max-width: auto;
 }
 
-.background {
-  height: auto;
-  max-width: 100%;
-}
 
-@media only screen and (max-width: 500px) {
-  body {
-      background-color: lightblue;
-  }
-  .menu, .main {
-      width: 100%;
-  }
-}
+
+
