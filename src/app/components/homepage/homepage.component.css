@@ -7,12 +7,8 @@ div {
 .background {
   background-color: white;
 }
-  .quote {
+  .quoteGrpahic {
   position: center;
-  width: 699px;
-  height: 245px;
-  background-repeat: no-repeat;
-  background-size: contain;
   border: 1px solid;
 
   }
@@ -29,6 +25,7 @@ div {
   border: 1px solid grey;
   position: center;
   font-family: 'Playfair Display SC', serif;
+  size: 25%;
   }
 
   .card:hover {
@@ -53,8 +50,8 @@ div {
   box-shadow: 0 8px 16px 0 black;
 }
 .blgImg {
-    width: 95%;
-    height: 95%;
+    width: 50%;
+    height: 50%;
 }
 .smlDate {
   padding-top: 10px;
@@ -91,8 +88,6 @@ div {
 .img {
   width: 100%;
   height: 400px;
-  background-repeat: no-repeat;
-  background-size: contain;
   border: 1px solid;
 }
 
@@ -111,7 +106,7 @@ div {
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 300px) {
     /* For mobile phones: */
     [class*="col-"] {
         width: 100%;
@@ -121,23 +116,23 @@ div {
 
 /* medium screen */
 @media only screen and (max-width: 800px) {
-  .img {
- width: 800px; }
+
  .background {
    width: 800px;
- 
-   }
-   .menu, .main {
-       width: 100%;
-   }
  }
-
+}
  /*small screens */
- @media only screen and (max-width:200px) {
+ @media only screen and (max-width:300px) {
    .img {
      width: 200px;
    }
-   .background {
-     width: 200px;
+
+   .quoteGraphic {
+     width:399px;
+     height: 145px;
+     position: center;
+   }
+   .footer {
+     width: 25%;
    }
  }

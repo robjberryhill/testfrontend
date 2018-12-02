@@ -45,9 +45,9 @@ export class BlogdetailsComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.comService.getBcoms(id).subscribe(comments => {
       this.comments = comments;
-    });    
+    });
   }
-  
+
   addCom(data): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.comService.addComSrvc(data as Comments, id)
