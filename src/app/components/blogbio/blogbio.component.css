@@ -38,7 +38,9 @@ width: 800px;
 /*small screens */
 @media only screen and (max-width:200px) {
   .bioImg {
-    width: 200px;
+    width: 200px;}
+    .footer {
+      width: 25%;
   }
 }
 .bioBody{padding: 5px 20px 20px 20px;}
