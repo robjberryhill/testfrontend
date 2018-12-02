@@ -20,10 +20,10 @@ export class ComcreateComponent implements OnInit {
     this.comService.getComList().subscribe(cmnt => this.comments = cmnt);
   }
 
-  addCom(data): void {
+  /*addCom(data): void {
     this.comService.addComSrvc(data as Comments)
     .subscribe(com => {this.comments.push(com)});
     window.location.href = '/comments';
-  }
+  }*/
 
 }

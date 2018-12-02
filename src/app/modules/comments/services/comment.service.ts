@@ -30,8 +30,9 @@ export class CommentService {
     return this.http.get<Comments>(url);
   }
 
-  addComSrvc(comments: Comments): Observable<Comments> {
-    return this.http.post<Comments>(this.comPath, comments, httpOptions);
+  addComSrvc(comments: Comments, id: number): Observable<Comments> {
+    const url = `${this.comPath}/${id}`;
+    return this.http.post<Comments>(url, comments, httpOptions);
   }
 
   updateComSrvc(comments: Comments): Observable<any> {

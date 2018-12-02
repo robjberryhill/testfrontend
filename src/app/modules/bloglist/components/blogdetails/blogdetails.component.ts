@@ -50,7 +50,7 @@ export class BlogdetailsComponent implements OnInit {
   
   addCom(data): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.comService.addComSrvc(data as Comments)
+    this.comService.addComSrvc(data as Comments, id)
     .subscribe(com => {this.comments.push(com)});
     window.location.href = '/blogList/' + id;
   }
