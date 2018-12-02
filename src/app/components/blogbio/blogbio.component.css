@@ -23,16 +23,24 @@
   height: auto;
   max-width: 100%;
 }
+/* medium screen */
+@media only screen and (max-width: 800px) {
+ .bioImg {
+width: 800px;
 
-@media only screen and (max-width: 500px) {
-  body {
-      background-color: lightblue;
+
   }
   .menu, .main {
       width: 100%;
   }
 }
 
+/*small screens */
+@media only screen and (max-width:200px) {
+  .bioImg {
+    width: 200px;
+  }
+}
 .bioBody{padding: 5px 20px 20px 20px;}
 .footer {
   text-align: center;
@@ -56,4 +64,3 @@
   line-height: 80px;
   color: rgb(70, 70, 70);
 }
-
