@@ -50,8 +50,8 @@ div {
   box-shadow: 0 8px 16px 0 black;
 }
 .blgImg {
-    width: 95%;
-    height: 95%;
+    width: 50%;
+    height: 9;
 }
 .smlDate {
   padding-top: 10px;
@@ -126,7 +126,7 @@ div {
    .img {
      width: 200px;
    }
- 
+
    .quoteGraphic {
      width:399px;
      height: 145px;
