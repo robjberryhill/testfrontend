@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 540px;
-    border-bottom: 10px solid rgb(58, 58, 58);
+    border-bottom: 10px solid black(58, 58, 58);
 }
 
 
@@ -27,11 +27,6 @@
 @media only screen and (max-width: 800px) {
  .bioImg {
 width: 800px;
-
-
-  }
-  .menu, .main {
-      width: 100%;
   }
 }
 

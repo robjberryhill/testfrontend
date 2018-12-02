@@ -93,3 +93,11 @@ h4 {
     line-height: 80px;
     color: rgb(70, 70, 70);
   }
+/* small screen*/
+ /*small screens */
+ @media only screen and (max-width:400px){
+   .col-4-12 img {
+     height: 40%;
+     width:40%;
+   }
+ }
