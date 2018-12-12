@@ -1,8 +1,8 @@
-<img src="src/app/modules/bloglist/components/blogdetails/BlogDetailsGraphic.jpg">
-<div class="detailPage">
-  <h1>
 
-  </h1>
+<div class="detailPage">
+    <h1>
+      <img src="src/app/modules/bloglist/components/blogdetails/BlogDetailsGraphic.jpg">
+    </h1>
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
   <div class="grid" *ngIf="blog">
     <div class="col-4-12">
@@ -27,12 +27,12 @@
     <div class="col-12-12">
       <div class="comDt" *ngFor="let com of comments">
         <h6 class="comUsr">By: <span class="usrNm">{{com.user.userName}}</span></h6>
-        <p routerLink="/comments/{{com.comId}}" ><span class="comMes">{{com.comMessage}}</span> </p>
+        <p class="comMes" routerLink="/comments/{{com.comId}}" ><span >{{com.comMessage}}</span> </p>
     </div>
   </div>
   <div class="grid3">
     <div class="col-12-12">
-        <div>
+        <div class="mainCom">
             <form #comData="ngForm" (ngSubmit)="addCom(comData.value)">
               <div>
                 <label for="comMessage">Comment: </label><br/>

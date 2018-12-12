@@ -1,5 +1,61 @@
 [class*='col-'] {float: left;}
 * {box-sizing: border-box;}
+@media only all {
+h1 {
+  padding: 20px 5px 5px 5px;
+  margin: 50px 20px 50px 20px;
+  position: center;
+  border: 1px solid;
+}
+.grid {
+  background-color: whitesmoke;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  height: 100%;
+  margin: 0px 10px 20px 10px;
+  width: auto;
+  text-align: center;
+  min-height: 300px;
+}
+p {margin-top: 5px;}
+.cmDate {
+  font-size: x-small;
+  color: grey;
+}
+.btnCom a {
+  display: inline-block;
+  font-size: small;
+  margin: 10px;
+  background-color: grey;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+.btnCom a:hover {
+  background-color: white;
+  color: black;
+}
+.dlCom {
+  display: inline-block;
+  cursor: pointer;
+  font-size: small;
+  background-color: grey;
+  color: white;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+.dlCom:hover {
+  background-color: white;
+  color: black;
+}
+.smlDate {font-size: x-small;}
+.smlVls {font-size: x-small;}
+.col-12-12 {width: 100%;}
 .col-6-12{
     width: 50%;
     margin-top: 20px;
@@ -20,10 +76,43 @@
   line-height: 80px;
   color: rgb(70, 70, 70);
 }
-
+}
+@media only screen and (max-width:800px){
+  [class*="col-"] {width: 100%;}
+  h1 img {
+    height: 95%;
+    width: 95%;
+  }
+  .col-6-12 {margin-top: 0px;}
+  .icon {
+    text-align: center;
+    height: 70px;
+  }
+  .compInfo {
+    margin: 0px 0px 0px 0px;
+    line-height: 80px;
+    color: rgb(70, 70, 70);
+  }
+}
 /*small screens */
-@media only screen and (max-width:400px){
-  .footer {
-    width:25%
+@media only screen and (max-width:300px){
+  [class*="col-"] {width: 100%;}
+  h1 {
+    margin: 5px;
+    padding: 5px;
+  }
+  h1 img {
+    height: 95%;
+    width: 95%;
+  }
+  .col-6-12 {margin-top: 0px;}
+  .icon {
+    text-align: center;
+    height: 70px;
+  }
+  .compInfo {
+    margin: 0px 0px 0px 0px;
+    line-height: 80px;
+    color: rgb(70, 70, 70);
   }
  }

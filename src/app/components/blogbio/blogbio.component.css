@@ -1,44 +1,16 @@
 [class*='col-'] {float: left;}
 * {box-sizing: border-box;}
+@media only all {
 .bioImg {
-  padding: 20px;
-    top: 0;
-    background-image: url('http://localhost:3001/images/plchldr01.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 540px;
-    border-bottom: 10px solid black(58, 58, 58);
+  background-color: rgb(80, 80, 80);
+  padding: 25px;
 }
-
-
-
-.bio{
-  font-family: 'Playfair Display SC', serif;
+.bioImage {
+  padding: 20px 5px 5px 5px;
+  margin: 50px 20px 50px 20px;
+  position: center;
+  border: 1px solid;
 }
-
-
-
-.bioImg {
-  height: auto;
-  max-width: 100%;
-}
-/* medium screen */
-@media only screen and (max-width: 800px) {
- .bioImg {
-width: 800px;
-  }
-}
-
-/*small screens */
-@media only screen and (max-width:200px) {
-  .bioImg {
-    width: 200px;}
-    .footer {
-      width: 25%;
-  }
-}
-.bioBody{padding: 5px 20px 20px 20px;}
 .footer {
   text-align: center;
   margin-top: 20px;
@@ -61,3 +33,62 @@ width: 800px;
   line-height: 80px;
   color: rgb(70, 70, 70);
 }
+}
+/* medium screen */
+@media only screen and (max-width: 800px) {
+  [class*="col-"] {width: 100%;}
+  .bioImage {
+    padding: 10px 5px 5px 5px;
+    margin: 20px 10px 20px 10px;
+  }
+  .bioImage img {
+    height: 90%;
+    width: 90%;
+  }
+  .bioImg {padding: 10px;}
+
+  .bioBody {padding: 5px;}
+  .footer {
+    height: 200px;
+  }
+  .icon {
+    text-align: center;
+    height: 70px;
+  }
+  .compInfo {
+    margin: 0px 0px 0px 0px;
+    line-height: 80px;
+    color: rgb(70, 70, 70);
+  }
+
+}
+
+/*small screens */
+@media only screen and (max-width:300px) {
+  [class*="col-"] {width: 100%;}
+  .bioImage {
+    margin: 5px;
+    padding: 5px;
+  }
+  .bioImage img {
+    height: 95%;
+    width: 95%;
+  }
+  .bioImg {padding: 5px;}
+  .bioImg img {
+    height: 95%;
+    width: 95%;
+  }
+  .bioBody {padding: 5px;}
+  .footer {height: 200px;}
+  .icon {
+    text-align: center;
+    height: 70px;
+  }
+  .compInfo {
+    margin: 0px 0px 0px 0px;
+    line-height: 80px;
+    color: rgb(70, 70, 70);
+  }
+}
+

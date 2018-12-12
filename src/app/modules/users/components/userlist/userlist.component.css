@@ -1,9 +1,18 @@
 [class*='col-'] {float: left;}
 * {box-sizing: border-box;}
+h1 {
+  padding: 20px 5px 20px 5px;
+  margin: 50px 20px 50px 20px;
+  position: center;
+  border: 1px solid;
+}
 .userList {
     cursor: pointer;
     text-align: left;
-    margin-left: 20px;
+    border: 1px solid;
+    margin: 0px 20px 20px 20px;
+    background-color: whitesmoke;
+    padding: 10px 20px 10px 20px;
 }
 .userName {
     font-weight: bold;
@@ -11,7 +20,7 @@
 }
 .userInfo {
     font-size: small;
-    color: grey;
+    color: rgb(100, 100, 100);
 }
 .col-6-12{
     width: 50%;
@@ -34,9 +43,45 @@
   color: rgb(70, 70, 70);
 }
 
-/*small screens */
-@media only screen and (max-width:400px){
-  .footer {
-    width:25%
+@media only screen and (max-width: 800px) {
+  [class*="col-"] {width: 100%;}
+  h1 {padding: 20px 0px 20px 0px;}
+  h1 img {width: 95%; height: 95%;}
+  .col-6-12 {margin: 0px;}
+   .icon {
+     float: none;
+    text-align: center;
+    height: 70px;
+  }
+  .icon img {
+    margin: 0px;
+  }
+  .compInfo {
+    margin: 0px 0px 0px 0px;
+    line-height: 80px;
+  }
+}
+
+ /*small screens */
+ @media only screen and (max-width:300px) {
+  [class*="col-"] {width: 100%;}
+  h1 {margin: 20px 10px 20px 10px; padding: 10px 0px 10px 0px;}
+  h1 img {width: 95%; height: 95%;}
+  .col-6-12 {margin: 0px;}
+  .userList{
+    margin: 0px 5px 20px 5px;
+    padding: 5px;
+  }
+   .icon {
+     float: none;
+    text-align: center;
+    height: 70px;
+  }
+  .icon img {
+    margin: 0px;
+  }
+  .compInfo {
+    margin: 0px 0px 0px 0px;
+    line-height: 80px;
   }
  }

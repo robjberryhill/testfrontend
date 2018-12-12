@@ -1,10 +1,13 @@
 <div class="profilePage">
   <div class="grid" *ngIf="user">
+    <h1>{{user.firstName}} {{user.lastName}} Profile</h1>
+    <div class="profileContent">
     <div class="col-4-12">
-      <img src="{{user.userPhoto}}">
+        <div class="tempImg">
+            <div class="ImgOne">Temp Img</div>          
+        </div>
     </div>
     <div class="col-8-12">
-      <h3>{{user.firstName}} {{user.lastName}} Profile</h3>
       <h6>User Details:</h6>
       <p class="usrDate">Created On: {{user.userCreatedDate}}</p>
       <p class="userBdate">Birthday: {{user.birthDay}}</p>
@@ -16,6 +19,7 @@
       <div>
           <button class="styleButton" (click)="deleteUser()">Delete Profile</button>
       </div>
+    </div>
     </div>
   </div>
 </div>

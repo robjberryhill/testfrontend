@@ -1,15 +1,20 @@
 <h1>
   <img src="src/app/modules/comments/components/comdetails/CommentDetails.jpg">
 </h1>
-
-<div *ngIf="comment">
-  <h3>Blog: {{comment.blogPost.blogTitle}}</h3>
-  <h5>By User: {{comment.user.userName}}</h5>
-  <a routerLink="/comUpdate/{{comment.comId}}">Update</a>
-  <p>Comment Message: {{comment.comMessage}}<small> Likes:</small> {{comment.comLikes}} Date: {{comment.comCreatedDate}}</p>
-  <button (click)="deleteCom()">Delete Comment</button>
+<div class="grid" *ngIf="comment">
+        <div class="col-12-12">
+          <h6 class="blTitle">Blog Title: {{comment.blogPost.blogTitle}}</h6>
+          <p class="cmDate">By User: {{comment.user.userName}}</p>
+          <p>{{comment.comMessage}}</p>
+          <p class="smlVls">Date: {{comment.comCreatedDate}} Likes: {{comment.comLikes}}</p>
+          <div class="btnCom">
+              <span><a routerLink="/comUpdate/{{comment.comId}}">UPDATE</a></span>
+          </div>
+          <div class="dlCom" (click)="deleteCom()">
+              <span>DELETE</span>
+          </div>
+        </div>
 </div>
-
 <div class="footer">
     <div class="col-6-12">
         <h6 class="compInfo">&copy; 2018 Aliquam lectus sem.</h6>

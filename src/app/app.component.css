@@ -9,21 +9,6 @@ div {
 .h1 {
   font-family: 'Noto Serif', serif;
 }
-
-
-ul a {
-  display: center;
-  color:black;
-  padding: 2px 4px;
-  text-decoration: none;
-}
-
-ul a:hover {
-  background-color: #555;
-  color: lightgray;
-  cursor: -webkit-grab;
-}
-
 div {
   cursor:crosshair;
 }
@@ -32,7 +17,6 @@ div {
 .nav {
   background-color: #333;
   overflow: hidden;
-  font-family: 'Playfair Display SC', serif;
 
 }
 
@@ -64,10 +48,17 @@ div {
   height: auto;
   max-width: 100%;
 }
+@media only screen and (max-width:800px) {
+  h1 img {height: 80%; width: 80%;}
+}
 
-@media only screen and (max-width: 10000px) {
-
-  .menu, .main {
-      width: 50%;
+@media only screen and (max-width:300px) {
+  .nav a{
+    float: none;
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: 14px 0px 14px 0px;
   }
+  h1 img {height: 95%; width: 95%;}
 }

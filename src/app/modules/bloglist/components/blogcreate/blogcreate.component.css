@@ -1,13 +1,15 @@
 [class*='col-'] {float: left;}
 * {box-sizing: border-box;}
-.blgCreate {
-  font-family: 'Playfair Display SC', serif;
+h3 {
+  padding: 30px 5px 30px 5px;
+  margin: 50px 20px 50px 20px;
+  position: center;
+  border: 1px solid;
 }
-
 .blogForm {
-  background-color: lightgray;
+  background-color: whitesmoke;
   border: 2px solid black;
-  margin: auto;
+  margin: 0px 20px 0px 20px;
   padding: 20px;
   text-align: center;
 }
@@ -51,4 +53,35 @@ label {
   margin: 0px 100px 0px 20px;
   line-height: 80px;
   color: rgb(70, 70, 70);
+}
+@media only screen and (max-width:800px) {
+  [class*="col-"] {width: 100%;}
+  .col-6-12 {margin-top: 0px; background-color: lightgrey;}
+  .icon {
+    text-align: center;
+    height: 70px;
+  }
+  .compInfo {
+    margin: 0px 0px 0px 0px;
+    line-height: 80px;
+    color: rgb(70, 70, 70);
+  }
+  textarea {width: 95%;}
+}
+
+@media only screen and (max-width:300px) {
+  [class*="col-"] {width: 100%;}
+  h3 {margin: 5px;}
+  .blogForm {margin: 5px;}
+  .col-6-12 {margin-top: 0px; background-color: lightgrey;}
+  .icon {
+    text-align: center;
+    height: 70px;
+  }
+  .compInfo {
+    margin: 0px 0px 0px 0px;
+    line-height: 80px;
+    color: rgb(70, 70, 70);
+  }
+  textarea {width: 95%;}
 }

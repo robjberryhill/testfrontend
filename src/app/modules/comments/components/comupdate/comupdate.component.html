@@ -2,20 +2,21 @@
   <img src="src/app/modules/comments/components/comupdate/UpdateGraphic.jpg">
 </h1>
 
-<div *ngIf="comment">
-  <h3>Titled: {{comment.blogPost.blogTitle}}</h3>
-  <h4>By User: {{comment.user.userName}}</h4>
-  <p>Message: {{comment.comMessage}}</p>
-
+<div class="grid" *ngIf="comment">
+    <div class="col-12-12">
+        <h6 class="blTitle">Blog Title: {{comment.blogPost.blogTitle}}</h6>
+        <p class="cmDate">By User: {{comment.user.userName}}</p>
+        <p>{{comment.comMessage}}</p>
+    </div>
 <div>
   <div>
       <label>
           <textarea placeholder="message" [(ngModel)]="comment.comMessage"></textarea>
       </label>
   </div>
-  <div>
-    <button (click)="updateCom()">Update Comment</button>
-  </div>
+  <div class="dlCom" (click)="updateCom()">
+        <span>UPDATE</span>
+    </div>
   </div>
 </div>
 

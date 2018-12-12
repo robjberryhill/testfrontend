@@ -1,24 +1,39 @@
-[class*='col-'] {
-    float: left;
- }
-* {
-    box-sizing: border-box;
-}
-.profilePage{margin-top: 20px;}
+[class*='col-'] {float: left;}
+* {box-sizing: border-box;}
+h1 {
+    text-align: center;
+    padding: 20px 5px 20px 5px;
+    margin: 50px 20px 50px 20px;
+    border: 1px solid;
+  }
 .grid {
     width: auto;
-    min-height: 200px;
     text-align: left;
 }
-.col-4-12 {
-    padding-right: 20px;
-    padding-left: 20px;
-    width: 25%;
+.profileContent {
+    background-color: whitesmoke;
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    height: 100%;
+    margin: 0px 20px 20px 20px;
+    min-height: 300px;
 }
-.col-8-12 {
-    width: 75%;
+.col-4-12 {width: 25%;}
+.col-8-12 {width: 75%;}
+.tempImg {
+    height: 200px;
+    width: 200px;
 }
-
+.ImgOne {
+    border-radius: 8px;
+    height: 95%;
+    width: 95%;
+    text-align: center;
+    line-height: 195px;
+    color: whitesmoke;
+    background-color: grey;
+}
 h6 {
     margin: 0;
     padding-right: 20px;
@@ -35,7 +50,6 @@ h6 {
     margin-top: 10px;
     margin-right: 10px;
     font-size: small;
-    float: left;
     background-color: grey;
     color: white;
     display: inline-block;
@@ -70,9 +84,57 @@ h6 {
   color: rgb(70, 70, 70);
 }
 
-/*small screens */
-@media only screen and (max-width:400px){
-  .footer {
-    width:25%
+@media only screen and (max-width: 800px) {
+    [class*="col-"] {width: 100%;}
+    h1 {padding: 20px 10px 20px 10px;}
+    .col-6-12 {margin: 0px;}
+    .col-8-12 {
+        margin: 10px 25px 10px 25px;
+        text-align: left;
+    }
+    h6 {float: none;}
+    .tempImg {margin: auto;}
+    .grid {text-align: center;}
+    .profileContent {
+        margin: 5px 5px 20px 5px;
+        min-height: 500px;
+    }
+     .icon {
+       float: none;
+      text-align: center;
+      height: 70px;
+    }
+    .icon img {
+      margin: 0px;
+    }
+    .compInfo {
+      margin: 0px 0px 0px 0px;
+      line-height: 80px;
+    }
   }
- }
+  
+   /*small screens */
+   @media only screen and (max-width:300px) {
+    [class*="col-"] {width: 100%;}
+    h1 {margin: 20px 10px 20px 10px; padding: 10px 0px 10px 0px;}
+    .profileContent {
+        margin: 5px;
+        min-height: 500px;
+    }
+    .col-6-12 {margin: 0px;}
+    .tempImg {height: 95%; width: 95%; text-align: center;}
+    .ImgOne {height: 100%; width: 100%;}
+    h6 {float: none;}
+     .icon {
+       float: none;
+      text-align: center;
+      height: 70px;
+    }
+    .icon img {
+      margin: 0px;
+    }
+    .compInfo {
+      margin: 0px 0px 0px 0px;
+      line-height: 80px;
+    }
+   }

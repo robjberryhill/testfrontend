@@ -1,5 +1,12 @@
 [class*='col-'] {float: left;}
 * {box-sizing: border-box;}
+@media only all {
+    h1 {
+        padding: 20px 5px 5px 5px;
+        margin: 50px 20px 50px 20px;
+        position: center;
+        border: 1px solid;
+    }
 .grid {
     font-family: 'Playfair Display SC', serif;
     margin-bottom: 20px;
@@ -7,6 +14,7 @@
     flex-wrap: wrap;
 }
 .blogs {
+    background-color: whitesmoke;
     margin: auto;
     margin-top: 20px;
     width: 400px;
@@ -64,10 +72,55 @@
     line-height: 80px;
     color: rgb(70, 70, 70);
   }
+}   
+@media only screen and (max-width:800px) {
+    [class*="col-"] {width: 100%;}
+    h1 {
+        padding: 20px 5px 5px 5px;
+        margin: 20px 5px 20px 5px;
+      }
+      h1 img {
+        height: 80%;
+        width: 80%;
+      }
+    .blogs {
+        width: 300px;
+        min-height: 400px;
+    }
+    .footer {height: 200px;}
+    .icon {
+      text-align: center;
+      height: 70px;
+    }
+    .compInfo {
+      margin: 0px 0px 0px 0px;
+      line-height: 80px;
+      color: rgb(70, 70, 70);
+    }
+}
 
-  /* small screens*/
-  @media only screen and (max-width:400px){
-    .footer{
-      width:25%;
+  /*small screens */
+  @media only screen and (max-width:300px) {
+    [class*="col-"] {width: 100%;}
+    h1 {
+      margin: 5px;
+      padding: 5px;
+    }
+    h1 img {
+      height: 95%;
+      width: 95%;
+    }
+    .icon {
+      text-align: center;
+      height: 70px;
+    }
+    .compInfo {
+      margin: 0px 0px 0px 0px;
+      line-height: 80px;
+      color: rgb(70, 70, 70);
+    }
+    .blogs {
+        min-height: auto;
+        width: 95%;
     }
   }

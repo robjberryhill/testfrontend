@@ -45,18 +45,9 @@ export class BlogupdateComponent implements OnInit {
     console.log(files);
     console.log(this.imgSelected)
     this.blog.blogPhoto = (this.blogPath + '/images/' + id + 'blgimg' + this.imgSelected.name)
-
-
   }
 
   imgUpload() {
-    /*const id = +this.route.snapshot.paramMap.get('id');
-    const url = `${this.beUrl}/upload/${id}`;
-    const fd = new FormData();
-    fd.append('image', this.imgSelected, this.imgSelected.name);
-    console.log(this.imgSelected);
-    this.http.post(url, fd, {reportProgress: true})
-    .subscribe(r => {console.log(r)});*/
     const id = +this.route.snapshot.paramMap.get('id');
     this.blogService.imgUploadSvc(this.imgSelected, id)
     .subscribe(r => {
