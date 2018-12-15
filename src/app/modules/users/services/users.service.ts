@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Users } from '../../../shared/model/users';
 import { environment } from '../../../../environments/environment';
 
@@ -17,6 +17,8 @@ export class UsersService {
   private usersPath = this.beUrl + '/users/admin';
   private userPath = this.beUrl + '/users/profile';
   private userSignup = this.beUrl + '/users/signup';
+  private userLog = this.beUrl + '/users/login';
+  private userOut = this.beUrl + '/users/logout';
 
   getAllUsers(): Observable<Users[]> {
     return this.http.get<Users[]> (this.usersPath);
@@ -39,6 +41,14 @@ export class UsersService {
   deleteUserEntry(id: number): Observable<any> {
     const url = `${this.userPath}/${id}/delete`;
     return this.http.delete(url);
+  }
+
+  userLoginSvc(user: Users): Observable<Users> {
+    return this.http.post<Users>(this.userLog, user, httpOptions);
+  }
+
+  userLogOut(){
+    return this.http.get(this.userOut);
   }
 
   constructor(private http: HttpClient) { }

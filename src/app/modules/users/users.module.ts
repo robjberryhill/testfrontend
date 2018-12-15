@@ -6,6 +6,7 @@ import { UserlistComponent } from './components/userlist/userlist.component';
 import { UserprofileComponent } from './components/userprofile/userprofile.component';
 import { UsersignupComponent } from './components/usersignup/usersignup.component';
 import { UserupdateComponent } from './components/userupdate/userupdate.component';
+import { UserloginComponent } from './components/userlogin/userlogin.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { UserupdateComponent } from './components/userupdate/userupdate.componen
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [UserlistComponent, UserprofileComponent, UsersignupComponent, UserupdateComponent]
+  declarations: [UserlistComponent, UserprofileComponent, UsersignupComponent, UserupdateComponent, UserloginComponent]
 })
 export class UsersModule { }

@@ -14,6 +14,7 @@ import { ComdetailsComponent } from './modules/comments/components/comdetails/co
 import { ComupdateComponent } from './modules/comments/components/comupdate/comupdate.component';
 import { ComcreateComponent } from './modules/comments/components/comcreate/comcreate.component';
 import { BlogbioComponent } from './components/blogbio/blogbio.component';
+import { UserloginComponent } from './modules/users/components/userlogin/userlogin.component';
 
 const routes: Routes = [
   {
@@ -71,6 +72,10 @@ const routes: Routes = [
   {
     path: 'comCreate',
     component: ComcreateComponent
+  },
+  {
+    path: 'login',
+    component: UserloginComponent
   },
   {
     path: '',

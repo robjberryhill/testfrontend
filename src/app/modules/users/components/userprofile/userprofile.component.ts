@@ -30,4 +30,11 @@ export class UserprofileComponent implements OnInit {
     window.location.href = '/users';
   }
 
+  logOut(): void {
+    this.usersService.userLogOut().subscribe(r =>
+      console.log('You Have Been Logged Out!')
+      );
+    window.location.href = '/login';
+  }
+
 }
