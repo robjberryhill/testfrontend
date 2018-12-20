@@ -17,8 +17,9 @@ export class UsersignupComponent implements OnInit {
 
   addUser(data): void {
     this.usersService.addUserEntry(data as Users)
-    .subscribe(user => {this.users.push(user)});
-    window.location.href = '/users';
+    .subscribe(user => {
+      this.users.push(user);
+    });
+    window.location.href = '/login';
   }
-
 }

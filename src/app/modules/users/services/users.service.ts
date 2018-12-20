@@ -5,7 +5,8 @@ import { Users } from '../../../shared/model/users';
 import { environment } from '../../../../environments/environment';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  withCredentials: true
 };
 
 @Injectable({
@@ -26,7 +27,7 @@ export class UsersService {
 
   getUserId(id: number): Observable<Users> {
     const url = `${this.userPath}/${id}`;
-    return this.http.get<Users>(url);
+    return this.http.get<Users>(url, httpOptions);
   }
 
   addUserEntry(user: Users): Observable<Users> {
