@@ -18,8 +18,12 @@ export class UserloginComponent implements OnInit {
 
   userLogin(data){
     this.userService.userLoginSvc(data as Users)
-    .subscribe(user => 
-      window.location.href = '/profile/' + user.userId
-      );
+    .subscribe(user => {
+      if(user.userAdmin){
+        window.location.href = '/users'
+      } else {
+        window.location.href = '/profile/' + user.userId
+      }
+    });
   }
 }

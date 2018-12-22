@@ -5,7 +5,11 @@ import { Users } from '../../../shared/model/users';
 import { environment } from '../../../../environments/environment';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+  headers: new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Authorization': 'my-auth-token',
+    'Cache-Control': 'public, no-cache'
+  }),
   withCredentials: true
 };
 
@@ -22,7 +26,7 @@ export class UsersService {
   private userOut = this.beUrl + '/users/logout';
 
   getAllUsers(): Observable<Users[]> {
-    return this.http.get<Users[]> (this.usersPath);
+    return this.http.get<Users[]> (this.usersPath, httpOptions);
   }
 
   getUserId(id: number): Observable<Users> {

@@ -12,7 +12,10 @@ export class UserprofileComponent implements OnInit {
 
   user: Users;
 
-  constructor(private usersService: UsersService, private route: ActivatedRoute) { }
+  constructor(
+    private usersService: UsersService,
+    private route: ActivatedRoute,
+    ) { }
 
   ngOnInit() {
     this.getUserProfileId();
@@ -36,5 +39,7 @@ export class UserprofileComponent implements OnInit {
       );
     window.location.href = '/login';
   }
+
+
 
 }
